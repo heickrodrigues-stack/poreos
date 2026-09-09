@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostalgia - Bolachas Artesanais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGO E CABEÇALHO -->
+  <header class="logo-container">
+    <div class="cookie-logo">
+      <div class="chip chip-1"></div>
+      <div class="chip chip-2"></div>
+      <div class="chip chip-3"></div>
+      <div class="chip chip-4"></div>
+      <div class="chip chip-5"></div>
+    </div>
+    <h1 class="brand-title">Nostalgia</h1>
+    <p class="brand-subtitle">Bolachas Artesanais & Afeto</p>
+  </header>
+
+  <!-- CATÁLOGO DE SABORES -->
+  <main class="menu-container">
+    <h2 class="menu-title">Nossos Sabores Especiais</h2>
+    
+    <div class="flavors-grid" id="flavorsContainer">
+      <!-- Os cards de sabores serão injetados pelo JavaScript -->
+    </div>
+
+    <!-- PAINEL DE INTERAÇÃO -->
+    <div class="selection-summary" id="summaryBox">
+      Você selecionou: <span id="selectedFlavorName">-</span>! 🍪
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
