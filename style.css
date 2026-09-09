@@ -1,0 +1,224 @@
+/* --- IMPORTAÇÃO DE FONTE EXTERNA --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+/* --- VARIÁVEIS DE CORES E TEMA --- */
+:root {
+  --bg-main: #faf4ed;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fffaf5;
+  --primary: #6b3e26;
+  --primary-hover: #8c5334;
+  --secondary: #e2a85c;
+  --accent: #d97736;
+  --text-dark: #3a2e2b;
+  --text-muted: #7a685d;
+  --shadow-soft: 0 10px 30px rgba(107, 62, 38, 0.08);
+  --shadow-hover: 0 15px 35px rgba(226, 168, 92, 0.25);
+}
+
+/* --- RESET E ESTILOS BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  background-image: radial-gradient(#e2a85c22 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* --- LOGO DA MARCA --- */
+.logo-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cookie-logo {
+  width: 110px;
+  height: 110px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  position: relative;
+  box-shadow: inset -6px -6px 0px #c6893f, 0px 10px 20px rgba(107, 62, 38, 0.15);
+  border: 5px dashed #bd7a2d;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Gotas de Chocolate da Logo */
+.chip {
+  width: 16px;
+  height: 16px;
+  background-color: #4a2511;
+  border-radius: 50% 0 50% 50%;
+  position: absolute;
+  box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.chip-1 { top: 22px; left: 32px; transform: rotate(15deg); }
+.chip-2 { top: 28px; right: 28px; transform: rotate(-30deg); }
+.chip-3 { bottom: 28px; left: 28px; transform: rotate(45deg); }
+.chip-4 { bottom: 22px; right: 38px; transform: rotate(-10deg); }
+.chip-5 { top: 48px; left: 48px; transform: rotate(80deg); }
+
+.brand-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.brand-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* --- CONTAINER E GRID DOS SABORES --- */
+.menu-container {
+  width: 100%;
+  max-width: 850px;
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(226, 168, 92, 0.2);
+}
+
+.menu-title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary);
+  position: relative;
+}
+
+.menu-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.flavors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* --- CARD DO SABOR --- */
+.flavor-card {
+  border: 1px solid #f0e6df;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: var(--bg-card-hover);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flavor-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-hover);
+  background-color: #ffffff;
+}
+
+.flavor-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.08));
+}
+
+.flavor-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.flavor-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.flavor-price {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.select-btn {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(107, 62, 38, 0.2);
+}
+
+.select-btn:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(107, 62, 38, 0.3);
+}
+
+.select-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- PAINEL DE SELEÇÃO --- */
+.selection-summary {
+  margin-top: 35px;
+  padding: 18px;
+  background: linear-gradient(135deg, #e2a85c, #d97736);
+  color: #ffffff;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: none;
+  box-shadow: 0 8px 20px rgba(217, 119, 54, 0.3);
+  animation: fadeIn 0.4s ease-out;
+}
+
+#selectedFlavorName {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
